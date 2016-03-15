@@ -1,0 +1,17 @@
+<div class="controls">
+
+    <select (change)="onCaptionSubChange($event.target.value)">
+        <option *ngFor="#i of captionSubReddits">{{i}}</option>
+    </select>
+
+    <select (change)="onImageSubChange($event.target.value)">
+        <option *ngFor="#i of imageSubReddits">{{i}}</option>
+    </select>
+
+
+</div>
+
+<div class="bucket">
+    <img id="image" [src]="imgUrl" class="center-block img-responsive" (click)="change()" />
+    <p id="text">{{caption}}</p>
+</div>
